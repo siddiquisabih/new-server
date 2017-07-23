@@ -7,7 +7,8 @@ const Todo = require('./Model/TodoSchema')
 
 mongoose.Promise = global.Promise
 
-mongoose.connect('mongodb://localhost/tododo')
+// mongoose.connect('mongodb://localhost/tododo')
+mongoose.connect('mongodb://sabhi123:sabhi123@ds117913.mlab.com:17913/sabhi')
 app.use(bodyParser.json())
 
 
