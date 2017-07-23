@@ -24,7 +24,7 @@ app.get('/api', (req, res, next) => {
     })
 
 
-app.post('/api/todo' , (req, res, next) => {
+app.post('/api/add' , (req, res, next) => {
 
         const request = req.body;
         console.log(request)
