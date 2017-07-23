@@ -4,8 +4,10 @@ const app = express()
 const mongoose = require('mongoose')
 const port = process.env.PORT || '3000';
 const Todo = require('./Model/TodoSchema')
+
 mongoose.Promise = global.Promise
 
+// mongoose.connect('mongodb://localhost/tododo')
 mongoose.connect('mongodb://sabih:test123@ds119223.mlab.com:19223/testing')
 app.use(bodyParser.json())
 
@@ -22,7 +24,7 @@ app.get('/api', (req, res, next) => {
     })
 
 
-app.post('/api/add' , (req, res, next) => {
+app.post('/api/todo' , (req, res, next) => {
 
         const request = req.body;
         console.log(request)
@@ -41,62 +43,3 @@ app.use((err, req, res, next) => {
 app.listen(port, function () {
     console.log("server is listening on port : ", port);
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// app.use((err, req, res, next) => {
-//    console.log(234567876543)
-//     next()
-// })
-
-// Routes(app)
-
-
-// app.listen(1000 , ()=>{
-//     console.log('server is running on port 1000')
-// })
-
-
-// app.get('/api' , (req , res , next)=>{
-//     console.log('chal gya')
-//     res.send('hi there')
-// })
