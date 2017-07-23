@@ -4,11 +4,9 @@ const app = express()
 const mongoose = require('mongoose')
 const port = process.env.PORT || '3000';
 const Todo = require('./Model/TodoSchema')
-
 mongoose.Promise = global.Promise
 
-// mongoose.connect('mongodb://localhost/tododo')
-mongoose.connect('mongodb://sabhi123:sabhi123@ds117913.mlab.com:17913/sabhi')
+mongoose.connect('mongodb://sabih:test123@ds119223.mlab.com:19223/testing')
 app.use(bodyParser.json())
 
 
