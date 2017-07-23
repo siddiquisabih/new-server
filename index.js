@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const app = express()
 const mongoose = require('mongoose')
 const port = process.env.PORT || '3000';
-const Todo = require('../src/Model/TodoSchema')
+const Todo = require('./Model/TodoSchema')
 
 mongoose.Promise = global.Promise
 
